@@ -115,6 +115,12 @@ The figure below shows:
 
 The visualization demonstrates how well the GAN has learned to approximate the true underlying distribution through adversarial training.
 
+### PDF Estimation Plot
+
+![PDF Estimation of Transformed NO₂ Data using GAN](A2.jpeg)
+
+**Figure:** Comparison of real NO₂ transformed data histogram with GAN-estimated probability density function. The red curve represents the learned distribution obtained through kernel density estimation on 50,000 generated samples. The close alignment between the histogram and the estimated PDF indicates successful distribution learning by the adversarial network.
+
 ## 9. Observations
 
 ### Mode Coverage
