@@ -36,10 +36,15 @@ where:
 
 ### Transformation Parameters
 
-For the given university roll number (102303921):
+For the given university roll number:
 
-- **aᵣ = 0.5 × (102303921 mod 7) = 0.5 × 0 = 0.0**
-- **bᵣ = 0.3 × ((102303921 mod 5) + 1) = 0.3 × (1 + 1) = 0.6**
+- **r = 102303921**
+- **aᵣ = 0.5 × (r mod 7) = 0.5 × (102303921 mod 7) = 0.5 × 0 = 0.0**
+- **bᵣ = 0.3 × ((r mod 5) + 1) = 0.3 × ((102303921 mod 5) + 1) = 0.3 × (1 + 1) = 0.6**
+
+In the code, these are represented as:
+- **ar = 0.0**
+- **br = 0.6**
 
 The transformation applies a frequency-modulated sinusoidal modification to the original NO₂ data.
 
@@ -89,9 +94,10 @@ The generator and discriminator are trained adversarially until the generator pr
 After training the GAN:
 
 1. Generate 50,000 samples using the trained generator
-2. Apply Kernel Density Estimation (KDE) with bandwidth 0.35 to the generated samples
+2. Apply Kernel Density Estimation (KDE) with bandwidth method 0.35 to the generated samples
 3. The estimated density represents the learned probability density function of z
-4. Compare with the empirical histogram of real transformed samples
+4. Compare with the empirical histogram of real transformed samples using 70 bins
+5. Visualize with professional formatting: 12x6 figure size, steel blue histogram bars with black edges, red PDF line
 
 ## 7. Input / Output
 
@@ -169,7 +175,8 @@ The GAN learns implicit representations of the data distribution without requiri
 Assignment_2/
 ├── a2.ipynb              # Main Jupyter notebook with complete implementation
 ├── data.csv              # India Air Quality Dataset (NO₂ feature)
-├── README.md             # Project documentation
+├── A2.jpeg               # PDF estimation result visualization
+└── README.md             # Project documentation
 ```
 
 ## 13. Execution Platform
@@ -193,11 +200,14 @@ Assignment_2/
 |-----------|-------|-------------|
 | Epochs | 10,000 | Total training iterations |
 | Batch Size | 256 | Samples per training step |
-| Learning Rate | 0.0003 | Optimizer learning rate |
+| Learning Rate | 0.0003 | Adam optimizer learning rate |
 | Hidden Units | 128 | Neurons in hidden layers |
 | Generated Samples | 50,000 | Samples for PDF estimation |
-| KDE Bandwidth | 0.35 | Smoothing parameter for density estimation |
+| KDE Bandwidth Method | 0.35 | Smoothing parameter for density estimation |
+| Histogram Bins | 70 | Number of bins in histogram |
+| Figure Size | 12 x 6 | Width and height in inches |
 | Noise Dimension | 1 | Input noise dimension |
+| Histogram Alpha | 0.65 | Transparency of histogram bars |
 
 ## 16. Author
 
