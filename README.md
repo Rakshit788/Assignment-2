@@ -39,7 +39,7 @@ where:
 For the given university roll number:
 
 - **r = 102303921**
-- **aᵣ = 0.5 × (r mod 7) = 0.5 × (102303921 mod 7) = 0.5 × 0 = 0.0**
+- **aᵣ = 0.5 × (r mod 7) = 0.5 × (102303921 mod 7) = 0.5 × 0 = 0.3**
 - **bᵣ = 0.3 × ((r mod 5) + 1) = 0.3 × ((102303921 mod 5) + 1) = 0.3 × (1 + 1) = 0.6**
 
 In the code, these are represented as:
@@ -222,3 +222,4 @@ This project is submitted as an assignment to demonstrate understanding of:
 - PyTorch implementation
 - Data preprocessing and visualization
 - Kernel Density Estimation methods
+
