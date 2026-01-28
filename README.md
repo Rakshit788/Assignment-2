@@ -43,7 +43,7 @@ For the given university roll number:
 - **bᵣ = 0.3 × ((r mod 5) + 1) = 0.3 × ((102303921 mod 5) + 1) = 0.3 × (1 + 1) = 0.6**
 
 In the code, these are represented as:
-- **ar = 0.0**
+- **ar = 0.3**
 - **br = 0.6**
 
 The transformation applies a frequency-modulated sinusoidal modification to the original NO₂ data.
@@ -222,4 +222,5 @@ This project is submitted as an assignment to demonstrate understanding of:
 - PyTorch implementation
 - Data preprocessing and visualization
 - Kernel Density Estimation methods
+
 
